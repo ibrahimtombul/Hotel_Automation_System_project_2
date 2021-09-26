@@ -31,7 +31,7 @@ import txtRepository.TxtCustomer;
 import txtRepository.TxtRoom;
 
 public class AddCustomer extends JavafxEntity {	
-	//Doluu ROOM'un Room listesine eklenmemesi iÁin bir sorgulama methodu
+	//Doluu ROOM'un Room listesine eklenmemesi i√ßin bir sorgulama methodu
 	public boolean roomQuery()  {	
 		boolean answer=false;
 		File file = new File("Customer.txt");
@@ -59,7 +59,8 @@ public class AddCustomer extends JavafxEntity {
 	}
 	return answer;
 	}
-	//COLUMNLARA B›LG› «EKMEK
+	//
+	//COLUMNLARA BILGI CEKMEK
 	 public  ObservableList<RoomEntity> getAll()  {
 		 ObservableList<RoomEntity> list=FXCollections.observableArrayList();
 			File file=new File("Room.txt");
@@ -109,7 +110,7 @@ public class AddCustomer extends JavafxEntity {
 		            e1.printStackTrace();
 		        }
 			});
-			//BUTTON GO TO OPERAT›ONS CLASS
+			//BUTTON GO TO OPERAT√ùONS CLASS
 			CustomerOperations ced=new 	CustomerOperations();
 			btnOperations.setOnAction(e->{
 					try {
@@ -118,7 +119,7 @@ public class AddCustomer extends JavafxEntity {
 			            e1.printStackTrace();
 			        }
 				});
-			//EX›T bUTTON
+			//EX√ùT bUTTON
 			btnExit.setOnAction(e->{ 	stage.close();	 });
 			//INFO BUTTON
 			btninfoepmloyer.setOnAction(e->{
@@ -127,13 +128,13 @@ public class AddCustomer extends JavafxEntity {
 			});
 			//OVER
 		
-			//ODALARIN L›STELENMES› ›«›N COLUMN, TABLO, GR›DPANE VE D‹ZENLEMELER›
+			//ODALARIN L√ùSTELENMES√ù √ù√á√ùN COLUMN, TABLO, GR√ùDPANE VE D√úZENLEMELER√ù
 		TableColumn<RoomEntity,Integer> column1 = new TableColumn<>("Empty Rooms");
 		TableView<RoomEntity> roomsTable = new TableView<RoomEntity>();
 		GridPane gridpane=new GridPane();
 		
 		getPricefieldAdd().getItems().addAll("200","350","500");
-		getPricefieldAdd().setPromptText("PR›CE(TL)");
+		getPricefieldAdd().setPromptText("PR√ùCE(TL)");
 		//SON 
 		
 		
